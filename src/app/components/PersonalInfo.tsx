@@ -15,11 +15,11 @@ export function PersonalInfo({person}: PersonalInfoProps) {
                 <CircleUser width={120} height={120}/>
             </div>
 
-            <h1 className="font-normal text-gray-900 text-4xl md:text-3xl leading-none mb-8 flex justify-center">
+            <h1 className="font-normal text-gray-900 text-2xl md:text-3xl leading-none mb-8 flex justify-center">
                 {person && person['full name']}</h1>
 
             <Card title={'Informações pessoais'} icon={<User className="w-5 h-5"/>}>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <p className="text-sm text-gray-600">CPF</p>
                         <p className="font-normal text-gray-600 md:text-xl">{person && person.cpf}</p>

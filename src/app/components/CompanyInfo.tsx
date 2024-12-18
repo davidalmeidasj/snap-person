@@ -9,7 +9,7 @@ interface CompanyInfoProps {
 export function CompanyInfo({companies}: CompanyInfoProps) {
     return (
         <Card title="Vínculos Empresariais" icon={<Building2 className="w-5 h-5"/>}>
-            <div className="grid gap-4 grid-cols-2">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 ">
                 {companies && companies.map((company, index) => (
                     <div key={index} className=" p-4 rounded-md">
                         <h3 className="font-medium text-lg mb-2">{company['razao social']}</h3>

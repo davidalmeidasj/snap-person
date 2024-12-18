@@ -9,7 +9,7 @@ interface RelatedPeopleProps {
 export function RelatedPeople({people}: RelatedPeopleProps) {
     return (
         <Card title="Pessoas Relacionadas" icon={<Users className="w-5 h-5"/>}>
-            <div className="grid gap-4 grid-cols-2">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 ">
                 {people.map((person, index) => (
                     <div key={index} className=" p-4 rounded-md">
                         <div className="grid gap-2">

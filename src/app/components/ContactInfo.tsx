@@ -16,7 +16,7 @@ export function ContactInfo({ phones, emails }: ContactInfoProps) {
             <PhoneIcon className="w-4 h-4" />
             Telefones
           </h3>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 ">
             {phones && phones.map((phone, index) => (
               <div key={index} className="flex items-center gap-2  p-3 rounded-md">
                 <div>
