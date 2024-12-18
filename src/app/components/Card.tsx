@@ -2,7 +2,7 @@ import React from 'react';
 
 interface CardProps {
     title: string;
-    children?: React.ReactNode; // More inclusive than React.JSX.Element
+    children?: React.ReactNode;
     icon?: React.ReactNode;
 }
 
