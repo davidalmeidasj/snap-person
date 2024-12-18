@@ -23,7 +23,7 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-gray-100">
+        <div className="bg-gray-100 pr-2 sm:pr-10">
             <Loader show={loading}>
                 <section className="py-10 md:py-16">
                     <div className="container max-w-screen-xl mx-auto px-4">
@@ -32,7 +32,7 @@ export default function Home() {
 
                             <button
                                 onClick={handlePrint}
-                                className="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500 mr-6 md:mr-0">
+                                className="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">
                                 Download Relatório
                             </button>
                         </header>
