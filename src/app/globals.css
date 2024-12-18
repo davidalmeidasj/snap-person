@@ -14,6 +14,24 @@
   }
 }
 
+@media print {
+  body * {
+    visibility: hidden; /* Hide everything by default */
+  }
+
+  .print-mode .download-area,
+  .print-mode .download-area * {
+    visibility: visible; /* Show only the download area */
+  }
+
+  .print-mode .download-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, {useRef} from "react";
 import {PersonalInfo} from "@/app/components/PersonalInfo";
 import {ContactInfo} from "@/app/components/ContactInfo";
 import {AddressInfo} from "@/app/components/AddressInfo";
@@ -12,6 +12,15 @@ export default function Home() {
 
     const {loading, snap, mainPerson, relatedPeople} = useSnapData();
 
+    const divRef = useRef<HTMLDivElement>(null);
+
+    const handlePrint = () => {
+        if (divRef.current) {
+            document.body.classList.add("print-mode");
+            window.print();
+            document.body.classList.remove("print-mode");
+        }
+    };
 
     return (
         <div className="bg-gray-100">
@@ -22,20 +31,23 @@ export default function Home() {
                             <img src="assets/image/navbar-logo.png" alt="Logo"/>
 
                             <button
+                                onClick={handlePrint}
                                 className="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">
                                 Download Relatório
                             </button>
                         </header>
 
-                        <PersonalInfo person={mainPerson}/>
+                        <div className={'download-area'} ref={divRef}>
+                            <PersonalInfo person={mainPerson}/>
 
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <ContactInfo phones={snap?.telefone} emails={snap?.email}/>
-                            <AddressInfo addresses={snap?.endereco}/>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <ContactInfo phones={snap?.telefone} emails={snap?.email}/>
+                                <AddressInfo addresses={snap?.endereco}/>
+                            </div>
+
+                            <CompanyInfo companies={snap?.empresa}/>
+                            <RelatedPeople people={relatedPeople}/>
                         </div>
-
-                        <CompanyInfo companies={snap?.empresa}/>
-                        <RelatedPeople people={relatedPeople}/>
                     </div>
 
                 </section>

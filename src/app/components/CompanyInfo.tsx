@@ -11,7 +11,7 @@ export function CompanyInfo({companies}: CompanyInfoProps) {
         <Card title="Vínculos Empresariais" icon={<Building2 className="w-5 h-5"/>}>
             <div className="grid gap-4 grid-cols-2">
                 {companies && companies.map((company, index) => (
-                    <div key={index} className="bg-gray-50 p-4 rounded-md">
+                    <div key={index} className=" p-4 rounded-md">
                         <h3 className="font-medium text-lg mb-2">{company['razao social']}</h3>
                         <div className="grid gap-2">
                             <p className="text-gray-600">CNPJ: {company.cnpj}</p>

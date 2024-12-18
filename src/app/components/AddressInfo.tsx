@@ -12,7 +12,7 @@ export function AddressInfo({ addresses }: AddressInfoProps) {
     <Card title="Endereços" icon={(<MapPin className="w-5 h-5" />)}>
       <div className="grid gap-4">
         {addresses && addresses.map((address, index) => (
-          <div key={index} className="bg-gray-50 p-4 rounded-md">
+          <div key={index} className=" p-4 rounded-md">
             <div className="grid gap-2">
               <div>
                 <p className="font-medium">

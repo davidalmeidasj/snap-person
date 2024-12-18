@@ -18,7 +18,7 @@ export function ContactInfo({ phones, emails }: ContactInfoProps) {
           </h3>
           <div className="grid gap-4 md:grid-cols-2">
             {phones && phones.map((phone, index) => (
-              <div key={index} className="flex items-center gap-2 bg-gray-50 p-3 rounded-md">
+              <div key={index} className="flex items-center gap-2  p-3 rounded-md">
                 <div>
                   <p className="font-medium">{phone['phone number']}</p>
                   {phone.operadora && (
@@ -42,7 +42,7 @@ export function ContactInfo({ phones, emails }: ContactInfoProps) {
           </h3>
           <div className="grid gap-4 md:grid-cols-2">
             {emails && emails.map((email, index) => (
-              <div key={index} className="bg-gray-50 p-3 rounded-md">
+              <div key={index} className=" p-3 rounded-md">
                 <p className="font-medium">{email['email address']}</p>
               </div>
             ))}
