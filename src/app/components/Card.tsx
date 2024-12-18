@@ -8,7 +8,7 @@ interface CardProps {
 
 export function Card({ title, children, icon }: CardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-lg shadow-md p-6 mb-8">
       <div className="flex items-center gap-2 mb-4">
         {icon && <div>{icon}</div>}
         <h2 className="text-xl font-semibold text-gray-800">{title}</h2>

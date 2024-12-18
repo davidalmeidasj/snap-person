@@ -55,6 +55,9 @@ export function RelatedPeople({people}: RelatedPeopleProps) {
                                             <p className="text-gray-600">
                                                 {address.bairro} - {address.city} - {address.area}
                                             </p>
+                                            <p className="text-gray-600">
+                                                CEP: {address['cep ou zipcode'] || '-'}
+                                            </p>
                                         </div>
                                     ))}
                                 </div>
